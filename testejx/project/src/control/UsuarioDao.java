@@ -5,7 +5,8 @@ import model.Usuario;
 public class UsuarioDao {
 
     private Usuario base[];
-    private int tam, i;
+    private int tam;
+    private int  i = 0;
 
     public UsuarioDao(int tam) {
         this.tam = tam;
@@ -18,6 +19,18 @@ public class UsuarioDao {
         base[i] = u;
         this.i++;
         System.out.println("Cadastrado com sucesso  (EZ)");
+    }
+
+    public void alterar(Usuario u) {
+
+        int ln;
+        for(ln = 0; ln < this.i; ln++) {
+            if(base[ln].getCpf().equals(u.getCpf()))
+            base[ln] = u;
+        }
+
+        System.out.println("Alterado com sucesso");
+
     }
 
     public void listar() {
