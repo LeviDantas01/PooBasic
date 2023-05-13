@@ -20,7 +20,7 @@ public class Cadastro {
         endereco.setCidade("Sergipe");
         endereco.setNumero(847);
         endereco.setEstado("Pernambuco");
-        
+
         dados.inserir(pessoa);
 
         pessoa = new Usuario();
@@ -33,9 +33,9 @@ public class Cadastro {
         endereco.setNumero(847);
         endereco.setEstado("Pernambuco");
         dados.inserir(pessoa);
-       
-        dados.listar();
+        dados.excluir(pessoa.getCpf());
+        //dados.listar();
 
     }
-    
+
 }

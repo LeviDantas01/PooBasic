@@ -22,15 +22,21 @@ public class UsuarioDao {
     }
 
     public void alterar(Usuario u) {
-
         int ln;
         for(ln = 0; ln < this.i; ln++) {
             if(base[ln].getCpf().equals(u.getCpf()))
             base[ln] = u;
         }
-
         System.out.println("Alterado com sucesso");
+    }
 
+    public void excluir(String cpf) {
+        int ln;
+        for(ln = 0; ln < this.i; ln++) {
+            if(base[ln].getCpf().equals(cpf))
+            base[ln] = null;
+        }
+        System.out.println("CPF CANCELADO ! otario");
     }
 
     public void listar() {
